@@ -8,7 +8,7 @@ install
 5- gau
 6- katana
 7- uro
-8 - gf
+8- gf
 9- Gxss
 10- dalfox
 11- aquatone && google_chrome
