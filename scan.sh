@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "BASH SCRIPT COMMEND/ BY Ammar Yasser"
+echo " SCAN BASH SCRIPT/ BY Ammar Yasser"
 
 read -p "Enter domain name: " DOMAIN
 
-OUTPUT_DIR="/home/kali/Desktop/test"
+OUTPUT_DIR="/home/kali/Desktop/test" #EDIT IT
 mkdir -p $OUTPUT_DIR
 
 subfinder -d $DOMAIN | sort -u > $OUTPUT_DIR/subdomains.txt
@@ -21,9 +21,9 @@ subjs -i $OUTPUT_DIR/live.txt | sort -u > $OUTPUT_DIR/js.txt
 
 httpx -list $OUTPUT_DIR/js.txt -o $OUTPUT_DIR/livejs.txt
 
-echo "[*] PASSIVE END $OUTPUT_DIR"
+echo "[*] DONE $OUTPUT_DIR"
 
-echo "[*] ACTIVE START $OUTPUT_DIR"
+echo "[*] XSS TEST $OUTPUT_DIR"
 
 echo "$DOMAIN" | gau --threads 5 >> $OUTPUT_DIR/Enpoints.txt
 
@@ -38,6 +38,3 @@ cat $OUTPUT_DIR/XSS.txt | Gxss -p khXSS -o $OUTPUT_DIR/XSS_Ref.txt
 dalfox file $OUTPUT_DIR/XSS_Ref.txt -o $OUTPUT_DIR/Vulnerable_XSS.txt
 
 echo "[*] Results saved to $OUTPUT_DIR"
-
-
-#arjun -u https://tst2.dev.targets.com/cgi-bin/fr.cfg/php/custom/id-pass.php -m GET -w Parameters_Fuzz.txt ex: for a manual test
