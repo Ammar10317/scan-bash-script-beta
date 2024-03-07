@@ -1,3 +1,13 @@
 # scan-bash-script-beta
 It's bash script It saves time and scans the target and quickly scans xss
-I
+install
+1- subfinder 
+2- sublist3r
+3- assetfinder
+4- httpx
+5- gau
+6- katana
+7- uro
+8 - gf
+9- Gxss
+10- dalfox
