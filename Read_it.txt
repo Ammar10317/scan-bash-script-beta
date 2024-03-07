@@ -11,3 +11,4 @@ install
 8 - gf
 9- Gxss
 10- dalfox
+11- aquatone && google_chrome
